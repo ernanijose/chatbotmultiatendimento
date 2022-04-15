@@ -1,0 +1,619 @@
+{
+  "settings": {
+    "languages": [
+      "pt"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "pt"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "pt": {
+        "settings": {
+          "locale": "pt",
+          "trainByDomain": false,
+          "tag": "domain-manager-pt",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "bom,dia": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "boa,tard": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "boa,noit": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "boa,madrug": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "oi,tud": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "ola": {
+            "intent": "saudacao",
+            "domain": "default"
+          },
+          "o,qual,seu,telefon": {
+            "intent": "informacao.fone",
+            "domain": "default"
+          },
+          "me,o,pass,telefon": {
+            "intent": "informacao.fone",
+            "domain": "default"
+          },
+          "de,telefon,voc": {
+            "intent": "informacao.fone",
+            "domain": "default"
+          },
+          "fic,onde,voc": {
+            "intent": "localizacao",
+            "domain": "default"
+          },
+          "a,de,localizaca,quer,voc": {
+            "intent": "localizacao",
+            "domain": "default"
+          },
+          "de,o,pont,qual,referenc": {
+            "intent": "localizacao",
+            "domain": "default"
+          },
+          "de,enderec,voc": {
+            "intent": "localizacao",
+            "domain": "default"
+          },
+          "localizaca,sua": {
+            "intent": "localizacao",
+            "domain": "default"
+          },
+          "enderec,o,qual": {
+            "intent": "localizacao",
+            "domain": "default"
+          },
+          "enderec,me,o,pass": {
+            "intent": "localizacao",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "saudacao": "default",
+          "informacao.fone": "default",
+          "localizacao": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "bom dia",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "boa tarde",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "boa noite",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "boa madrugada",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "oi tudo",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "olá",
+            "intent": "saudacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "qual o seu telefone",
+            "intent": "informacao.fone"
+          },
+          {
+            "domain": "default",
+            "utterance": "me passa o telefone",
+            "intent": "informacao.fone"
+          },
+          {
+            "domain": "default",
+            "utterance": "telefone de voces",
+            "intent": "informacao.fone"
+          },
+          {
+            "domain": "default",
+            "utterance": "onde vocês ficam",
+            "intent": "localizacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "quero a localizacao de vocês",
+            "intent": "localizacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "qual o ponto de referencia",
+            "intent": "localizacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "endereco de vocês",
+            "intent": "localizacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "sua localização",
+            "intent": "localizacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "qual o endereco",
+            "intent": "localizacao"
+          },
+          {
+            "domain": "default",
+            "utterance": "me passa o endereco",
+            "intent": "localizacao"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "pt",
+              "tag": "nlu-pt",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "bom": 1,
+              "dia": 1,
+              "boa": 1,
+              "tard": 1,
+              "noit": 1,
+              "madrug": 1,
+              "oi": 1,
+              "tud": 1,
+              "ola": 1,
+              "qual": 1,
+              "o": 1,
+              "seu": 1,
+              "telefon": 1,
+              "me": 1,
+              "pass": 1,
+              "de": 1,
+              "voc": 1,
+              "onde": 1,
+              "fic": 1,
+              "quer": 1,
+              "a": 1,
+              "localizaca": 1,
+              "pont": 1,
+              "referenc": 1,
+              "enderec": 1,
+              "sua": 1
+            },
+            "intents": {
+              "saudacao": 1,
+              "informacao.fone": 1,
+              "localizacao": 1
+            },
+            "intentFeatures": {
+              "saudacao": {
+                "bom": 1,
+                "dia": 1,
+                "boa": 1,
+                "tard": 1,
+                "noit": 1,
+                "madrug": 1,
+                "oi": 1,
+                "tud": 1,
+                "ola": 1
+              },
+              "informacao.fone": {
+                "qual": 1,
+                "o": 1,
+                "seu": 1,
+                "telefon": 1,
+                "me": 1,
+                "pass": 1,
+                "de": 1,
+                "voc": 1
+              },
+              "localizacao": {
+                "onde": 1,
+                "voc": 1,
+                "fic": 1,
+                "quer": 1,
+                "a": 1,
+                "localizaca": 1,
+                "de": 1,
+                "qual": 1,
+                "o": 1,
+                "pont": 1,
+                "referenc": 1,
+                "enderec": 1,
+                "sua": 1,
+                "me": 1,
+                "pass": 1
+              }
+            },
+            "featuresToIntent": {
+              "bom": [
+                "saudacao"
+              ],
+              "dia": [
+                "saudacao"
+              ],
+              "boa": [
+                "saudacao"
+              ],
+              "tard": [
+                "saudacao"
+              ],
+              "noit": [
+                "saudacao"
+              ],
+              "madrug": [
+                "saudacao"
+              ],
+              "oi": [
+                "saudacao"
+              ],
+              "tud": [
+                "saudacao"
+              ],
+              "ola": [
+                "saudacao"
+              ],
+              "qual": [
+                "informacao.fone",
+                "localizacao"
+              ],
+              "o": [
+                "informacao.fone",
+                "localizacao"
+              ],
+              "seu": [
+                "informacao.fone"
+              ],
+              "telefon": [
+                "informacao.fone"
+              ],
+              "me": [
+                "informacao.fone",
+                "localizacao"
+              ],
+              "pass": [
+                "informacao.fone",
+                "localizacao"
+              ],
+              "de": [
+                "informacao.fone",
+                "localizacao"
+              ],
+              "voc": [
+                "informacao.fone",
+                "localizacao"
+              ],
+              "onde": [
+                "localizacao"
+              ],
+              "fic": [
+                "localizacao"
+              ],
+              "quer": [
+                "localizacao"
+              ],
+              "a": [
+                "localizacao"
+              ],
+              "localizaca": [
+                "localizacao"
+              ],
+              "pont": [
+                "localizacao"
+              ],
+              "referenc": [
+                "localizacao"
+              ],
+              "enderec": [
+                "localizacao"
+              ],
+              "sua": [
+                "localizacao"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "pt",
+                "tag": "nlu-pt",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "bom",
+                "dia",
+                "boa",
+                "tard",
+                "noit",
+                "madrug",
+                "oi",
+                "tud",
+                "ola",
+                "qual",
+                "o",
+                "seu",
+                "telefon",
+                "me",
+                "pass",
+                "de",
+                "voc",
+                "onde",
+                "fic",
+                "quer",
+                "a",
+                "localizaca",
+                "pont",
+                "referenc",
+                "enderec",
+                "sua"
+              ],
+              "intents": [
+                "saudacao",
+                "informacao.fone",
+                "localizacao"
+              ],
+              "perceptrons": [
+                [
+                  3.9931609630584717,
+                  3.9931609630584717,
+                  5.968201160430908,
+                  2.0082123279571533,
+                  1.9920530319213867,
+                  1.9737334251403809,
+                  3.9984548091888428,
+                  3.9984548091888428,
+                  7.541575908660889,
+                  -1.8237923383712769,
+                  -2.7760372161865234,
+                  -0.586459755897522,
+                  -1.776091456413269,
+                  -0.9489896297454834,
+                  -0.9489896297454834,
+                  -1.7555376291275024,
+                  -3.0935447216033936,
+                  -1.6242516040802002,
+                  -1.6242516040802002,
+                  -0.3668380677700043,
+                  -0.3668380677700043,
+                  -3.366990804672241,
+                  -0.2607194483280182,
+                  -0.2607194483280182,
+                  -1.737189531326294,
+                  -2.940319299697876,
+                  6.354624996956957
+                ],
+                [
+                  -0.30265751481056213,
+                  -0.30265751481056213,
+                  -0.49161070585250854,
+                  -0.17134487628936768,
+                  -0.15975689888000488,
+                  -0.14485377073287964,
+                  -0.2968086004257202,
+                  -0.2968086004257202,
+                  -0.5191877484321594,
+                  -0.043198805302381516,
+                  1.0307766199111938,
+                  2.2990427017211914,
+                  10.514984130859375,
+                  1.0789915323257446,
+                  1.0789915323257446,
+                  1.3580853939056396,
+                  1.8120149374008179,
+                  -1.1715222597122192,
+                  -1.1715222597122192,
+                  -1.1814923286437988,
+                  -1.1814923286437988,
+                  -1.332696795463562,
+                  -1.6031934022903442,
+                  -1.6031934022903442,
+                  -3.6938817501068115,
+                  -0.1323722004890442,
+                  0.5347162418291348
+                ],
+                [
+                  -1.2976247072219849,
+                  -1.2976247072219849,
+                  -2.021057605743408,
+                  -0.711872398853302,
+                  -0.657869279384613,
+                  -0.6157900094985962,
+                  -1.2896450757980347,
+                  -1.2896450757980347,
+                  -2.3610363006591797,
+                  2.1660196781158447,
+                  3.0813121795654297,
+                  -1.8393597602844238,
+                  -7.379411220550537,
+                  0.9212252497673035,
+                  0.9212252497673035,
+                  1.5757282972335815,
+                  3.3446805477142334,
+                  4.205011367797852,
+                  4.205011367797852,
+                  0.45102643966674805,
+                  0.45102643966674805,
+                  6.0435333251953125,
+                  2.432520627975464,
+                  2.432520627975464,
+                  6.722971439361572,
+                  5.5936360359191895,
+                  2.5229383393469096
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "pt",
+        "bom dia"
+      ],
+      [
+        "pt",
+        "boa tarde"
+      ],
+      [
+        "pt",
+        "boa noite"
+      ],
+      [
+        "pt",
+        "boa madrugada"
+      ],
+      [
+        "pt",
+        "oi tudo"
+      ],
+      [
+        "pt",
+        "olá"
+      ],
+      [
+        "pt",
+        "qual o seu telefone"
+      ],
+      [
+        "pt",
+        "me passa o telefone"
+      ],
+      [
+        "pt",
+        "telefone de voces"
+      ],
+      [
+        "pt",
+        "onde vocês ficam"
+      ],
+      [
+        "pt",
+        "quero a localizacao de vocês"
+      ],
+      [
+        "pt",
+        "qual o ponto de referencia"
+      ],
+      [
+        "pt",
+        "endereco de vocês"
+      ],
+      [
+        "pt",
+        "sua localização"
+      ],
+      [
+        "pt",
+        "qual o endereco"
+      ],
+      [
+        "pt",
+        "me passa o endereco"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "pt": {
+        "saudacao": [
+          {
+            "answer": "Olá, sou um atendente virtual, estou aqui para ajudá-lo, qual a sua dúvida?"
+          },
+          {
+            "answer": "Olá, sou um atendente virtual, em que posso ajudá-lo?"
+          },
+          {
+            "answer": "Oi, tudo bem, sou um atendentende virtual, estou aqui para ajudá-lo."
+          }
+        ],
+        "informacao.fone": [
+          {
+            "answer": "Nosso telefone é 61 3224-0806"
+          },
+          {
+            "answer": "Você pode entrar em contato conosco através do 61 3224-0806"
+          }
+        ],
+        "localizacao": [
+          {
+            "answer": "Nosso endereço fica em Brasilia-DF"
+          },
+          {
+            "answer": "Ficamos em Brasilia-DF"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
